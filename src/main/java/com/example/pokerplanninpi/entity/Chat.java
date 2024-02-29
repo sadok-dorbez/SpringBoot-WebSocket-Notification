@@ -7,6 +7,9 @@ import jakarta.persistence.Id;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 @Entity
 @Getter
 @Setter
@@ -18,4 +21,8 @@ public class Chat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
     long idChat ;
+    LocalDateTime Date_Chat_Start ;
+    LocalDateTime Date_Chat_End ;
+
+
 }
