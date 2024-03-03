@@ -1,7 +1,7 @@
 package com.example.pokerplanninpi.controllers;
 
 import com.example.pokerplanninpi.entity.Notification;
-import com.example.pokerplanninpi.services.NotificationServiceImp;
+import com.example.pokerplanninpi.services.NotificationService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,7 @@ import java.util.List;
 public class NotificationController {
 
     @Autowired
-    private NotificationServiceImp notificationServices;
+    private NotificationService notificationServices;
     @GetMapping
     public List<Notification> getAllNotifications() {
         return notificationServices.getAllNotifications();

@@ -8,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -35,7 +36,9 @@ public class Projet {
     @JsonIgnore
     Task task;
 
-
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="projet")
+    private Set<File> images;
     @ManyToOne
     @JsonIgnore
     ProductBacklog productBacklog;
