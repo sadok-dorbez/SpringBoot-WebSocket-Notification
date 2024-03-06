@@ -2,6 +2,7 @@ package com.example.pokerplanninpi.entity;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -25,6 +26,7 @@ public class File {
     @Lob
     private byte[] data;
 
+    @JsonIgnore
     @ManyToOne
     Projet projet;
 
