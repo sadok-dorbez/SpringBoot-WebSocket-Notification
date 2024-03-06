@@ -36,7 +36,7 @@ public class Projet {
     @JsonIgnore
     Task task;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="projet")
-    private Set<Image> images;
+    private Set<File> images;
     @ManyToOne
     @JsonIgnore
     ProductBacklog productBacklog;
